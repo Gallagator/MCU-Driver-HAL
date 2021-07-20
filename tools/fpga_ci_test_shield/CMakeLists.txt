@@ -13,17 +13,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-add_library(sdfx-fpga_ci_test_shield-gpio OBJECT)
-
-target_sources(sdfx-fpga_ci_test_shield-gpio
-    PRIVATE
-        main.cpp
+target_include_directories(mbed-fpga-ci-test-shield
+    INTERFACE
+        include
 )
 
-target_link_libraries(sdfx-fpga_ci_test_shield-gpio
-    PRIVATE
-        mbed-os
-        greentea::client
-        test-harness
-        mbed-fpga-ci-test-shield
+target_sources(mbed-fpga-ci-test-shield
+    INTERFACE
+        source/DigitalInOut.cpp
+        source/DynamicPinList.cpp
+        source/I2CTester.cpp
+        source/MbedTester.cpp
+        source/SPIMasterTester.cpp
+        source/SPISlaveTester.cpp
+        source/SPITester.cpp
+        source/UARTTester.cpp
 )

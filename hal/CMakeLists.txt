@@ -23,14 +23,14 @@ target_include_directories(mbed-core
 
 target_sources(mbed-core
     INTERFACE
-        # source/mbed_compat.c
+        source/mbed_compat.c
         source/mbed_critical_section_api.c
         source/mbed_flash_api.c
         source/mbed_gpio.c
-        # source/mbed_gpio_irq.c
+        source/mbed_gpio_irq.c
         # source/mbed_itm_api.c
         source/mbed_pinmap_common.c
-        # source/mbed_pinmap_default.cpp
+        source/mbed_pinmap_default.c
         source/mbed_us_ticker_api.c
         source/mbed_lp_ticker_api.c
         # source/static_pinmap.cpp
